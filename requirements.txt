@@ -1,0 +1,18 @@
+# Core PyTorch and torchvision (install matching your CUDA runtime, e.g. CUDA 11.8 or 12.x)
+# Example: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Scientific computing and data processing
+numpy>=1.24.0
+pandas>=2.0.0
+pyarrow>=12.0.0   # reads the BEN-14K parquet split
+h5py>=3.8.0      # only for cache_dsrsid.py (DSRSID.mat)
+pillow>=9.5.0
+einops>=0.7.0
+timm>=1.0.0
+
+# Vision Mamba (Vim) dependencies & CUDA SSM kernels:
+# Build or install wheels matching your PyTorch and CUDA versions:
+#   pip install causal_conv1d>=1.4.0
+#   pip install mamba_ssm>=1.1.1
