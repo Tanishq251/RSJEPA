@@ -54,19 +54,18 @@ Like prior methods, RS-JEPA is trained on co-registered S1–S2 pairs; no class 
 All methods were re-implemented and trained by us under one protocol (the paper compares against twelve re-implemented methods; the table below lists the main representatives of each family — see the paper for the full comparison). Params is the training model; GFLOPs is for one S1–S2 pair at 120×120 on the BEN-14K configuration. Evaluation is performed under symmetric bidirectional search at unified $120 \times 120$ resolution. Metric is **F1@5 (%)** across four retrieval directions ($1\to 1$, $2\to 2$, $1\to 2$, $2\to 1$) and their average.
 
 | Method | Params (M) ↓ | GFLOPs ↓ | BEN-14K (SAR ↔ MS) Avg. | CBRSIR-VS (SAR ↔ RGB) Avg. | DSRSID (PAN ↔ MS) Avg. |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Masked Image Modelling** | | | | | |
+|:---|---:|---:|---:|---:|---:|
 | MAE-RVSA (IEEE TGRS '22) | 172.23 | 50.33 | 67.58 | 66.46 | 75.84 |
 | ScaleMAE (ICCV '23) | 215.07 | 51.12 | 67.40 | 67.74 | 74.23 |
 | SatMAE++ (CVPR '24) | 223.57 | 106.18 | 67.47 | 67.55 | 77.79 |
-| **Multi-Sensor Self-Supervised** | | | | | |
 | CROMA (NeurIPS '23) | 200.27 | 38.17 | 69.64 | 74.50 | 87.42 |
 | DeCUR (CVPR '23) | 198.07 | 5.22 | 64.09 | 78.07 | 67.63 |
 | SkySense (CVPR '24) | 173.24 | 51.13 | 68.41 | 67.81 | 88.44 |
-| **Joint-Embedding Predictive** | | | | | |
 | CR-JEPA (arXiv '26) | 115.18 | 14.74 | 69.81 | 65.46 | 73.79 |
 | X-JEPA (WACV '26) | 230.47 | 32.98 | 67.79 | 73.18 | 86.86 |
-| **RS-JEPA (Ours)** | **14.57** (train) / **3.88** (eval) | **2.23** | **72.92** | **80.35** | **94.43** |
+| **RS-JEPA (Ours)** | **14.57 / 3.88** | **2.23** | **72.92** | **80.35** | **94.43** |
+
+*Note: RS-JEPA reports 14.57M training parameters and 3.88M evaluation parameters.*
 
 *Directional Breakdown for RS-JEPA:*
 * **BEN-14K**: S1→S1: 70.93% | S2→S2: 72.55% | S1→S2: 73.86% | S2→S1: 74.33% (**Mean: 72.92%**)
