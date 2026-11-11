@@ -44,7 +44,7 @@ Like prior methods, RS-JEPA is trained on co-registered S1–S2 pairs; no class 
 <div align="center">
 <img src="assets/rsjepa_architecture.png" alt="RS-JEPA architecture: training and inference pipelines" width="100%">
 
-*Figure: RS-JEPA architecture. **Training (top):** each sensor is tokenized by its own stem and randomly masked (60%); the visible tokens go through the shared Vim-Tiny-12 encoder with scan-path views, Adversarial View Coupling (AVC) and a query predictor that regresses the hidden patches (MSE) from a stop-gradient target trunk, while the uni / cross heads and the neighbourhood-consensus loss align the two sensors. **Inference (bottom):** the query is tokenized, encoded without masking along the row-major scan, mean-pooled and projected by the cross head, then ranked against the other sensor's gallery (top-5). [Vector PDF](assets/rsjepa_architecture.pdf)*
+*Figure: RS-JEPA architecture. **Training (top):** each sensor is tokenized by its own stem and randomly masked (60%); the visible tokens go through the shared Vim-Tiny-12 encoder with scan-path views, Adversarial View Coupling (AVC) and a query predictor that regresses the hidden patches (MSE) from a stop-gradient target trunk, while the uni / cross heads and the neighbourhood-consensus loss align the two sensors. **Inference (bottom):** the query is tokenized, encoded without masking along the row-major scan, mean-pooled and projected by the cross head, then ranked against the other sensor's gallery (top-5).*
 </div>
 
 ---
